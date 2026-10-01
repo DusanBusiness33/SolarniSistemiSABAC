@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="sr-Latn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solarni sistemi Šabac · Solarne elektrane ključ u ruke · Šabac</title>
+<meta name="description" content="Solarna elektrana za kuću i firmu, ključ u ruke. Projekat, montaža i sva papirologija do priključenja. Stignite na neto merenje do 31. decembra 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Geist:wght@400..600&display=swap&subset=latin-ext" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAF8F4;
+  --paper:#FFFFFF;
+  --ink:#15181B;
+  --muted:#5E646B;
+  --line:#E5E1D8;
+  --accent:#F2A20C;
+  --accent-dark:#D98E00;
+  --dark:#121614;
+  --dark-line:#2A302C;
+  --on-dark:#F3F1EC;
+  --on-dark-muted:#A3AAA5;
+  --head:"Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --body:"Geist", "Helvetica Neue", Arial, sans-serif;
+  --wrap:1100px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 32px}
+h1,h2,h3{font-family:var(--head);font-weight:700;letter-spacing:-0.025em;line-height:1.04;font-optical-sizing:auto}
+h2{font-size:clamp(34px,4.4vw,56px)}
+h3{font-size:22px;letter-spacing:-0.015em;line-height:1.2}
+p{max-width:65ch}
+.lead{font-size:19px;color:var(--muted)}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin-bottom:22px}
+.eyebrow::before{content:"";width:8px;height:8px;background:var(--accent);border-radius:2px}
+.dark .eyebrow{color:var(--on-dark)}
+section{padding:112px 0}
+.sec-head{max-width:720px;margin-bottom:56px}
+.sec-head p{margin-top:20px}
+
+/* dugmad */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:var(--ink);font-family:var(--body);font-weight:600;font-size:16px;padding:16px 26px;border-radius:8px;border:1px solid var(--accent);text-decoration:none;cursor:pointer;transition:background .15s}
+.btn:hover{background:var(--accent-dark);border-color:var(--accent-dark)}
+.btn svg{width:18px;height:18px}
+.link{font-weight:600;text-decoration:none;border-bottom:1.5px solid var(--accent);padding-bottom:2px}
+
+/* demo traka */
+.demo-bar{background:var(--ink);color:#fff;font-size:13px;text-align:center;padding:9px 16px;letter-spacing:.02em}
+.demo-bar b{color:var(--accent);font-weight:600}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(250,248,244,.97);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--head);font-weight:700;font-size:21px;letter-spacing:-0.02em;text-decoration:none}
+.logo svg{width:30px;height:30px}
+.nav ul{display:flex;gap:34px;list-style:none;font-size:15px}
+.nav ul a{text-decoration:none;color:var(--muted)}
+.nav ul a:hover{color:var(--ink)}
+.nav .btn{padding:11px 18px;font-size:15px}
+
+/* hero */
+.hero{padding:88px 0 96px}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:64px;align-items:stretch}
+.hero h1{font-size:clamp(46px,6.6vw,88px);letter-spacing:-0.035em;line-height:.98}
+.hero h1 em{font-style:normal;background:linear-gradient(transparent 62%, rgba(242,162,12,.38) 62%)}
+.hero .lead{margin-top:28px;max-width:52ch}
+.hero-cta{display:flex;align-items:center;gap:28px;margin-top:36px;flex-wrap:wrap}
+.countdown{margin-top:48px;border:1px solid var(--line);border-radius:8px;background:var(--paper);padding:22px 24px;display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.countdown .cd-label{font-size:14px;color:var(--muted);max-width:170px;line-height:1.4}
+.cd-nums{display:flex;gap:22px}
+.cd-nums div{text-align:left}
+.cd-nums strong{display:block;font-family:var(--head);font-size:40px;font-weight:700;letter-spacing:-0.03em;line-height:1;font-variant-numeric:tabular-nums}
+.cd-nums span{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+.ph{background:#ECE9E2 repeating-linear-gradient(135deg,transparent 0 14px,rgba(0,0,0,.022) 14px 15px);border:1px solid var(--line);border-radius:8px;display:flex;align-items:center;justify-content:center;text-align:center;color:#8C8F92;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:20px}
+.hero .ph{min-height:560px;height:100%}
+
+/* trake sa brojkama */
+.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:30px 28px;border-left:1px solid var(--line)}
+.stat:first-child{border-left:none;padding-left:0}
+.stat strong{display:block;font-family:var(--head);font-size:34px;font-weight:700;letter-spacing:-0.03em;line-height:1.1}
+.stat span{font-size:14px;color:var(--muted)}
+
+/* zasto sada */
+.dark{background:var(--dark);color:var(--on-dark)}
+.dark .lead,.dark p{color:var(--on-dark-muted)}
+.split{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--dark-line);border-radius:8px;overflow:hidden}
+.split > div{padding:40px}
+.split > div + div{border-left:1px solid var(--dark-line)}
+.split .tag{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:6px 10px;border-radius:6px;margin-bottom:20px}
+.tag-now{background:var(--accent);color:var(--ink)}
+.tag-after{border:1px solid var(--dark-line);color:var(--on-dark-muted)}
+.split h3{color:var(--on-dark);font-size:26px;margin-bottom:14px}
+.note{margin-top:32px;font-size:15px}
+.note b{color:var(--on-dark);font-weight:600}
+
+/* kalkulator */
+.calc{display:grid;grid-template-columns:.95fr 1.05fr;border:1px solid var(--line);border-radius:8px;background:var(--paper);overflow:hidden}
+.calc-in{padding:44px;border-right:1px solid var(--line)}
+.calc-out{padding:44px;display:flex;flex-direction:column}
+label.fl{display:block;font-weight:600;font-size:15px;margin-bottom:12px}
+.bill-val{font-family:var(--head);font-size:48px;font-weight:700;letter-spacing:-0.03em;line-height:1;margin-bottom:18px;font-variant-numeric:tabular-nums}
+.bill-val small{font-family:var(--body);font-size:18px;font-weight:500;color:var(--muted);letter-spacing:0}
+input[type=range]{width:100%;accent-color:var(--accent);height:28px}
+.range-ends{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-top:4px}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:6px}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label{display:block;text-align:center;border:1px solid var(--line);border-radius:8px;padding:12px 8px;font-size:14px;cursor:pointer;color:var(--muted)}
+.seg input:checked + label{border-color:var(--ink);color:var(--ink);font-weight:600;background:var(--bg)}
+.seg input:focus-visible + label{outline:2px solid var(--accent);outline-offset:2px}
+.field-gap{margin-top:36px}
+.out-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+.out-grid > div{padding:22px 0;border-bottom:1px solid var(--line)}
+.out-grid > div:nth-child(odd){padding-right:20px;border-right:1px solid var(--line)}
+.out-grid > div:nth-child(even){padding-left:20px}
+.out-grid span{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+.out-grid strong{font-family:var(--head);font-size:30px;font-weight:700;letter-spacing:-0.03em;line-height:1.1;font-variant-numeric:tabular-nums}
+.calc-warn{margin-top:18px;font-size:14px;color:var(--ink);border-left:3px solid var(--accent);padding-left:14px;display:none}
+.calc-small{font-size:13px;color:var(--muted);margin-top:18px}
+.calc-out .btn{margin-top:auto;align-self:flex-start}
+.calc-out .btn-wrap{margin-top:28px}
+
+/* koraci */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.step{padding:32px 28px 8px 0}
+.step + .step{padding-left:28px;border-left:1px solid var(--line)}
+.step .num{font-family:var(--head);font-size:15px;font-weight:700;color:var(--accent-dark);margin-bottom:26px;display:block}
+.step h3{margin-bottom:12px}
+.step p{font-size:15.5px;color:var(--muted)}
+
+/* projekti */
+.proj{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.proj .ph{aspect-ratio:4/3}
+.proj-meta{padding-top:18px}
+.proj-meta h3{font-size:20px}
+.proj-meta p{font-size:15px;color:var(--muted);margin-top:6px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.chips span{font-size:13px;border:1px solid var(--line);border-radius:6px;padding:4px 10px;background:var(--paper)}
+
+/* recenzije */
+.rev{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rev-card{border:1px solid var(--line);border-radius:8px;background:var(--paper);padding:30px}
+.stars{display:flex;gap:3px;margin-bottom:18px}
+.stars svg{width:18px;height:18px;fill:var(--accent)}
+.rev-card .ph{min-height:110px;margin-bottom:18px}
+.rev-card b{font-size:15px}
+.rev-card small{display:block;color:var(--muted);font-size:13px}
+
+/* pitanja */
+.faq{border-top:1px solid var(--line);max-width:860px}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:26px 0;font-family:var(--head);font-size:21px;font-weight:600;letter-spacing:-0.015em}
+summary::-webkit-details-marker{display:none}
+summary .pm{flex:0 0 28px;height:28px;border:1px solid var(--line);border-radius:6px;position:relative}
+summary .pm::before,summary .pm::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1.5px;background:var(--ink);transform:translate(-50%,-50%)}
+summary .pm::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .2s}
+details[open] summary .pm::after{transform:translate(-50%,-50%) rotate(0)}
+details p{padding:0 0 26px;color:var(--muted)}
+
+/* forma */
+.cta-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}
+.contact-list{margin-top:36px;border-top:1px solid var(--dark-line)}
+.contact-list div{padding:18px 0;border-bottom:1px solid var(--dark-line);display:flex;justify-content:space-between;gap:16px;font-size:15px}
+.contact-list span{color:var(--on-dark-muted)}
+.contact-list a,.contact-list b{color:var(--on-dark);font-weight:600;text-decoration:none}
+form{background:var(--paper);color:var(--ink);border-radius:8px;padding:40px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.f{margin-bottom:18px}
+.f label{display:block;font-size:14px;font-weight:600;margin-bottom:8px}
+.f input,.f textarea{width:100%;font-family:var(--body);font-size:16px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:13px 14px}
+.f input:focus,.f textarea:focus{outline:none;border-color:var(--ink)}
+.f textarea{min-height:92px;resize:vertical}
+.file{display:flex;align-items:center;gap:14px;border:1px dashed #CFC9BD;border-radius:8px;padding:16px;background:var(--bg);cursor:pointer}
+.file svg{width:26px;height:26px;flex:0 0 26px;stroke:var(--accent-dark)}
+.file span{font-size:14px;color:var(--muted)}
+.file b{display:block;color:var(--ink);font-size:15px}
+.file input{display:none}
+.f label.file{display:flex;margin-bottom:0}
+form .btn{width:100%;margin-top:6px}
+.form-small{font-size:13px;color:var(--muted);margin-top:14px;text-align:center;max-width:none}
+.form-ok{display:none;margin-top:16px;border-left:3px solid var(--accent);padding:10px 14px;font-size:14px;background:var(--bg)}
+
+footer{padding:48px 0 40px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.foot .logo{color:var(--ink);font-size:18px}
+
+.mbar{display:none}
+
+@media (max-width:980px){
+  .nav ul{display:none}
+  .hero-grid,.cta-grid{grid-template-columns:1fr;gap:44px}
+  .hero .ph{min-height:320px}
+  .calc{grid-template-columns:1fr}
+  .calc-in{border-right:none;border-bottom:1px solid var(--line)}
+  .steps{grid-template-columns:1fr 1fr}
+  .step:nth-child(3){padding-left:0;border-left:none}
+  .step{border-bottom:1px solid var(--line);padding-bottom:28px}
+}
+@media (max-width:768px){
+  body{font-size:16px}
+  .wrap{padding:0 20px}
+  section{padding:72px 0}
+  .hero{padding:48px 0 64px}
+  .lead{font-size:17px}
+  .nav{height:64px}
+  .nav .btn{display:none}
+  .countdown{gap:16px;padding:18px}
+  .countdown .cd-label{max-width:none}
+  .cd-nums{gap:16px}
+  .cd-nums strong{font-size:32px}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .stat{padding:22px 16px}
+  .stat:nth-child(3){border-left:none;padding-left:0}
+  .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .stat:first-child{padding-left:0}
+  .stat strong{font-size:28px}
+  .split{grid-template-columns:1fr}
+  .split > div{padding:28px}
+  .split > div + div{border-left:none;border-top:1px solid var(--dark-line)}
+  .calc-in,.calc-out{padding:26px 22px}
+  .out-grid strong{font-size:21px;white-space:nowrap}
+  .out-grid > div:nth-child(odd){padding-right:12px}
+  .out-grid > div:nth-child(even){padding-left:12px}
+  .steps{grid-template-columns:1fr}
+  .step,.step + .step{padding:26px 0;border-left:none}
+  .proj,.rev{grid-template-columns:1fr}
+  summary{font-size:18px;padding:22px 0}
+  form{padding:24px 20px}
+  .row2{grid-template-columns:1fr;gap:0}
+  .demo-bar{font-size:12px}
+  .mbar{display:grid;grid-template-columns:1fr 1.4fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:var(--bg);border-top:1px solid var(--line)}
+  .mbar a{padding:14px 10px;font-size:15px}
+  .mbar .ghost{background:var(--paper);border-color:var(--line)}
+  footer{padding-bottom:110px}
+}
+</style>
+</head>
+<body>
+
+<div class="demo-bar"><b>PRIMER ZA SOLARNI SISTEMI ŠABAC</b> · Fotografije, brojke i recenzije ubacujemo vaše.</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="logo" aria-label="Početna">
+      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="7" fill="#15181B"/><circle cx="16" cy="13" r="5" fill="#F2A20C"/><path d="M7 25h18M9.5 21h13" stroke="#F2A20C" stroke-width="2" stroke-linecap="round"/></svg>
+      <span data-f="ime">Solarni sistemi Šabac</span>
+    </a>
+    <ul>
+      <li><a href="#kalkulator">Kalkulator uštede</a></li>
+      <li><a href="#kako">Kako radimo</a></li>
+      <li><a href="#projekti">Projekti</a></li>
+      <li><a href="#pitanja">Pitanja</a></li>
+    </ul>
+    <a class="btn" data-tel href="#">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+      <span data-f="telefon">065 865 4265</span>
+    </a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow"><span>Solarne elektrane ključ u ruke · <span data-f="grad">Šabac</span></span></div>
+      <h1>Stignite na <em>neto merenje</em> dok još može.</h1>
+      <p class="lead">Ko preda zahtev do 31. decembra 2026. zadržava neto merenje: struju koju elektrana proizvede leti trošite zimi. Mi radimo projekat, montažu i svu papirologiju do priključenja.</p>
+      <div class="hero-cta">
+        <a href="#upit" class="btn">Pošaljite račun za struju
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#kalkulator" class="link">Izračunajte uštedu</a>
+      </div>
+      <div class="countdown" aria-live="polite">
+        <div class="cd-label">Do isteka roka za neto merenje ostalo je</div>
+        <div class="cd-nums">
+          <div><strong id="cd-d">00</strong><span>dana</span></div>
+          <div><strong id="cd-h">00</strong><span>sati</span></div>
+          <div><strong id="cd-m">00</strong><span>minuta</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="ph">Fotografija vaše elektrane na krovu</div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="wrap stats-grid">
+    <div class="stat"><strong data-f="projekata">XX</strong><span>postavljenih elektrana</span></div>
+    <div class="stat"><strong data-f="ocena">X,X</strong><span>ocena na Google mapama</span></div>
+    <div class="stat"><strong data-f="godina">XX</strong><span>godina u poslu</span></div>
+    <div class="stat"><strong>0</strong><span>odlazaka na šalter</span></div>
+  </div>
+</div>
+
+<section class="dark" id="rok">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Zašto baš sada</div>
+      <h2>Posle 31. decembra višak struje više ne čuvate za zimu.</h2>
+      <p class="lead">Izmene Zakona o energetici menjaju način obračuna za nove kupce-proizvođače. Za vas se računa datum kad je zahtev predat.</p>
+    </div>
+    <div class="split">
+      <div>
+        <span class="tag tag-now">Zahtev do 31. decembra 2026.</span>
+        <h3>Neto merenje</h3>
+        <p>Struja koju elektrana proizvede preko leta ostaje vama i troši se kad sunca ima manje. Obračun ide od 1. aprila do 31. marta, pa letnji višak pokriva zimske mesece.</p>
+      </div>
+      <div>
+        <span class="tag tag-after">Zahtev posle 31. decembra</span>
+        <h3>Neto obračun</h3>
+        <p>Svaki kWh predat u mrežu obračunava se posebno, svakog meseca. Cene i uslovi za ovaj model još nisu objavljeni, pa niko ne može da vam kaže koliko će se isplatiti.</p>
+      </div>
+    </div>
+    <p class="note"><b>Bitno:</b> za dokumentaciju i montažu treba vremena. Ko krene u decembru, rizikuje da ne stigne.</p>
+  </div>
+</section>
+
+<section id="kalkulator">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Kalkulator uštede</div>
+      <h2>Koliko bi vam elektrana skinula sa računa?</h2>
+      <p class="lead">Pomerite klizač na iznos koji prosečno plaćate. Za 10 sekundi vidite koja vam snaga treba i za koliko godina se elektrana vraća.</p>
+    </div>
+    <div class="calc">
+      <div class="calc-in">
+        <label class="fl" for="bill">Prosečan mesečni račun za struju</label>
+        <div class="bill-val"><span id="bill-out">9.000</span> <small>din</small></div>
+        <input type="range" id="bill" min="3000" max="40000" step="500" value="9000">
+        <div class="range-ends"><span>3.000 din</span><span>40.000 din</span></div>
+
+        <div class="field-gap">
+          <span class="fl">Na koju stranu je okrenut krov?</span>
+          <div class="seg" role="radiogroup">
+            <input type="radio" name="or" id="or1" value="1" checked><label for="or1">Jug</label>
+            <input type="radio" name="or" id="or2" value="0.88"><label for="or2">Istok ili zapad</label>
+            <input type="radio" name="or" id="or3" value="0.95"><label for="or3">Ravan krov</label>
+          </div>
+        </div>
+      </div>
+      <div class="calc-out">
+        <div class="out-grid">
+          <div><span>Preporučena snaga</span><strong id="o-kw">-</strong></div>
+          <div><span>Okvirna cena, ključ u ruke</span><strong id="o-price">-</strong></div>
+          <div><span>Ušteda mesečno, do</span><strong id="o-save">-</strong></div>
+          <div><span>Povrat, bez subvencije</span><strong id="o-back">-</strong></div>
+        </div>
+        <p class="calc-warn" id="o-warn">Za elektrane preko 10,8 kW sada treba građevinska dozvola. Vodimo je umesto vas, ali računajte na duži rok.</p>
+        <p class="calc-small">Okvirna računica za <span data-f="grad">Šabac</span>. Račun ne pada na nulu jer ostaju naknade za mrežu. Tačnu cenu dobijate kad vidimo vaš račun i krov.</p>
+        <div class="btn-wrap"><a href="#upit" class="btn">Pošaljite račun za tačnu ponudu</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kako" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Kako radimo</div>
+      <h2>Vi pošaljete račun. Sve posle toga radimo&nbsp;mi.</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="num">01</span><h3>Pošaljete račun</h3><p>Fotografija računa za struju i adresa su dovoljni. Iz potrošnje računamo koja snaga vam treba.</p></div>
+      <div class="step"><span class="num">02</span><h3>Izlazimo na krov</h3><p>Merimo krov, gledamo senke i orijentaciju. Dobijate ponudu sa tačnom cenom i računicom povrata.</p></div>
+      <div class="step"><span class="num">03</span><h3>Montaža</h3><p>Postavljamo panele, invertor i zaštitu. Posle montaže sistem puštamo u rad i pokazujemo vam kako da pratite proizvodnju na telefonu.</p></div>
+      <div class="step"><span class="num">04</span><h3>Priključenje</h3><p>Predajemo zahtev za status kupca-proizvođača i pratimo ga do priključenja. Vi ne idete ni na jedan šalter.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="projekti" style="background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Projekti</div>
+      <h2>Elektrane koje smo postavili</h2>
+      <p class="lead">Uz svaki projekat stoje snaga, mesto i proizvodnja, da vidite šta je realno za kuću poput vaše.</p>
+    </div>
+    <div class="proj">
+      <div>
+        <div class="ph">Fotografija projekta 1</div>
+        <div class="proj-meta"><h3>Porodična kuća</h3><p>Opština · godina ugradnje</p><div class="chips"><span>XX kWp</span><span>XX.XXX kWh godišnje</span></div></div>
+      </div>
+      <div>
+        <div class="ph">Fotografija projekta 2</div>
+        <div class="proj-meta"><h3>Vikendica sa baterijom</h3><p>Opština · godina ugradnje</p><div class="chips"><span>XX kWp</span><span>XX kWh baterija</span></div></div>
+      </div>
+      <div>
+        <div class="ph">Fotografija projekta 3</div>
+        <div class="proj-meta"><h3>Poslovni objekat</h3><p>Opština · godina ugradnje</p><div class="chips"><span>XX kWp</span><span>XX% manji račun</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="recenzije">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Recenzije</div>
+      <h2>Šta kažu ljudi kojima smo postavili elektranu</h2>
+    </div>
+    <div class="rev">
+      <div class="rev-card"><div class="stars" aria-label="5 od 5"><svg viewBox="0 0 24 24"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg></div><div class="ph">Tekst recenzije sa Google mapa</div><b>Ime klijenta</b><small>Opština · Google recenzija</small></div>
+      <div class="rev-card"><div class="stars" aria-label="5 od 5"><svg viewBox="0 0 24 24"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg></div><div class="ph">Tekst recenzije sa Google mapa</div><b>Ime klijenta</b><small>Opština · Google recenzija</small></div>
+      <div class="rev-card"><div class="stars" aria-label="5 od 5"><svg viewBox="0 0 24 24"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg></div><div class="ph">Tekst recenzije sa Google mapa</div><b>Ime klijenta</b><small>Opština · Google recenzija</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="pitanja" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Pitanja</div>
+      <h2>Ono što nas ljudi najčešće pitaju</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Da li mi treba građevinska dozvola?<span class="pm"></span></summary><p>Za kućne elektrane do 10,8 kW ne treba. Po pravilima iz 2026. za sisteme od 10,8 do 50 kW dozvola je obavezna. Ako vam treba jača elektrana, dozvolu vodimo mi i u ponudi piše koliko to traje.</p></details>
+      <details><summary>Šta ako ne stignem do 31. decembra?<span class="pm"></span></summary><p>Elektrana radi isto, ali se višak struje obračunava po novom modelu, neto obračunu. Cene za taj model još nisu objavljene. Zato savetujemo da zahtev predate što pre.</p></details>
+      <details><summary>Da li elektrana radi zimi i kad je oblačno?<span class="pm"></span></summary><p>Radi, ali proizvodi manje. Zato je neto merenje toliko važno: višak iz leta pokriva zimsku potrošnju.</p></details>
+      <details><summary>Postoji li subvencija?<span class="pm"></span></summary><p>Država je kroz program energetske sanacije pokrivala do polovine troška. Programi se otvaraju po opštinama i imaju rokove. Kad pošaljete račun, proverimo da li je u vašoj opštini trenutno nešto otvoreno.</p></details>
+      <details><summary>Koliko traje ceo proces?<span class="pm"></span></summary><p>Montaža kućne elektrane je posao od nekoliko dana. Najduže traje priključenje, a taj rok zavisi od mreže u vašem delu grada. Okvirni rok dobijate zajedno sa ponudom.</p></details>
+      <details><summary>Šta pokriva garancija?<span class="pm"></span></summary><p>Na panele i invertor garanciju daju proizvođači, a na montažu mi. Svaku garanciju upisujemo u ponudu sa tačnim rokom, da ne morate da je tražite po sitnim slovima.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="upit">
+  <div class="wrap cta-grid">
+    <div>
+      <div class="eyebrow">Besplatna procena</div>
+      <h2 style="font-size:clamp(34px,3.9vw,50px)">Pošaljite račun. Ostalo računamo&nbsp;mi.</h2>
+      <p class="lead" style="margin-top:20px">Javljamo vam se sa predlogom snage, cenom i računicom povrata. Bez obaveze i bez dolaska u kancelariju.</p>
+      <div class="contact-list">
+        <div><span>Telefon i Viber</span><a data-tel href="#" data-f="telefon">065 865 4265</a></div>
+        <div><span>Mejl</span><a data-mail href="#" data-f="email">vaš mejl</a></div>
+        <div><span>Radno vreme</span><b data-f="radnoVreme">pon-pet 8-17h</b></div>
+        <div><span>Adresa</span><b data-f="adresa">Kralja Milutina 138, Šabac</b></div>
+      </div>
+    </div>
+    <form id="forma" novalidate>
+      <div class="row2">
+        <div class="f"><label for="ime">Ime i prezime</label><input id="ime" name="ime" autocomplete="name"></div>
+        <div class="f"><label for="tel">Telefon (Viber)</label><input id="tel" name="tel" type="tel" autocomplete="tel"></div>
+      </div>
+      <div class="f"><label for="mesto">Mesto ili opština</label><input id="mesto" name="mesto"></div>
+      <div class="f">
+        <label>Račun za struju</label>
+        <label class="file" for="racun">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M12 18v-6M9 15l3-3 3 3"/></svg>
+          <span><b id="file-name">Dodajte fotografiju računa</b>Slikajte račun telefonom, to je dovoljno</span>
+          <input type="file" id="racun" accept="image/*,.pdf">
+        </label>
+      </div>
+      <div class="f"><label for="napomena">Napomena (nije obavezno)</label><textarea id="napomena" placeholder="Npr. krov od crepa, kuća na sprat, zanima me i baterija"></textarea></div>
+      <button class="btn" type="submit">Pošaljite upit</button>
+      <p class="form-small">Bez obaveze. Vaše podatke koristimo samo za ponudu.</p>
+      <p class="form-ok" id="form-ok">Ovo je demo. Na pravom sajtu upit sa računom stiže direktno na vaš mejl i Viber.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a href="#" class="logo"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true" width="26" height="26"><rect x="1" y="1" width="30" height="30" rx="7" fill="#15181B"/><circle cx="16" cy="13" r="5" fill="#F2A20C"/><path d="M7 25h18M9.5 21h13" stroke="#F2A20C" stroke-width="2" stroke-linecap="round"/></svg><span data-f="ime">Solarni sistemi Šabac</span></a>
+    <div><span data-f="adresa">Kralja Milutina 138, Šabac</span> · PIB <span data-f="pib">XXXXXXXXX</span> · <span data-f="telefon">065 865 4265</span></div>
+    <div>© 2026 <span data-f="ime">Solarni sistemi Šabac</span></div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn ghost" data-tel href="#">Pozovite</a>
+  <a class="btn" href="#upit">Pošaljite račun</a>
+</div>
+
+<script>
+/* ============================================================
+   PODACI FIRME - menjaš samo ovo za svaku novu firmu
+   ============================================================ */
+const FIRMA = {
+  ime: "Solarni sistemi Šabac",
+  telefon: "065 865 4265",
+  telefonLink: "+381658654265",
+  email: "vaš mejl",
+  adresa: "Kralja Milutina 138, Šabac",
+  grad: "Šabac",
+  radnoVreme: "pon-pet 8-17h",
+  pib: "XXXXXXXXX",
+  projekata: "XX",
+  ocena: "X,X",
+  godina: "XX",
+  // kalkulator
+  cenaPoKwMin: 800,       // € po kW, ključ u ruke (donja granica)
+  cenaPoKwMax: 1100,      // € po kW (gornja granica)
+  dinPoEvru: 117,
+  dinPoKwh: 12,           // prosečna cena kWh sa naknadama
+  proizvodnjaPoKwp: 1300, // kWh godišnje po kWp za Beograd, jug
+  udeoUstede: 0.7         // koliko računa realno nestaje
+};
+
+document.querySelectorAll("[data-f]").forEach(el => { if (FIRMA[el.dataset.f] !== undefined) el.textContent = FIRMA[el.dataset.f]; });
+document.querySelectorAll("[data-tel]").forEach(el => el.href = "tel:" + FIRMA.telefonLink);
+document.querySelectorAll("[data-mail]").forEach(el => el.href = "mailto:" + FIRMA.email);
+document.title = FIRMA.ime + " · Solarne elektrane ključ u ruke · " + FIRMA.grad;
+
+/* odbrojavanje do 31.12.2026. */
+const rok = new Date("2026-12-31T23:59:59+01:00").getTime();
+const pad = n => String(n).padStart(2, "0");
+function tick(){
+  let s = Math.max(0, Math.floor((rok - Date.now()) / 1000));
+  const d = Math.floor(s / 86400); s %= 86400;
+  const h = Math.floor(s / 3600); s %= 3600;
+  const m = Math.floor(s / 60);
+  document.getElementById("cd-d").textContent = d;
+  document.getElementById("cd-h").textContent = pad(h);
+  document.getElementById("cd-m").textContent = pad(m);
+}
+tick(); setInterval(tick, 30000);
+
+/* kalkulator */
+const fmt = n => Math.round(n).toLocaleString("sr-RS");
+const bill = document.getElementById("bill");
+function calc(){
+  const b = +bill.value;
+  const or = +document.querySelector("input[name=or]:checked").value;
+  document.getElementById("bill-out").textContent = fmt(b);
+  const godKwh = b / FIRMA.dinPoKwh * 12;
+  let kw = godKwh / (FIRMA.proizvodnjaPoKwp * or);
+  kw = Math.max(3, Math.round(kw * 2) / 2);
+  const pMin = kw * FIRMA.cenaPoKwMin, pMax = kw * FIRMA.cenaPoKwMax;
+  const stedMes = b * FIRMA.udeoUstede;
+  const stedGodEur = stedMes * 12 / FIRMA.dinPoEvru;
+  const yMin = pMin / stedGodEur, yMax = pMax / stedGodEur;
+  document.getElementById("o-kw").textContent = kw.toLocaleString("sr-RS") + " kW";
+  document.getElementById("o-price").textContent = fmt(Math.round(pMin / 100) * 100) + "-" + fmt(Math.round(pMax / 100) * 100) + " €";
+  document.getElementById("o-save").textContent = fmt(Math.round(stedMes / 100) * 100) + " din";
+  document.getElementById("o-back").textContent = Math.round(yMin) + "-" + Math.round(yMax) + " god.";
+  document.getElementById("o-warn").style.display = kw > 10.8 ? "block" : "none";
+}
+bill.addEventListener("input", calc);
+document.querySelectorAll("input[name=or]").forEach(r => r.addEventListener("change", calc));
+calc();
+
+/* forma */
+document.getElementById("racun").addEventListener("change", e => {
+  const f = e.target.files[0];
+  document.getElementById("file-name").textContent = f ? f.name : "Dodajte fotografiju računa";
+});
+document.getElementById("forma").addEventListener("submit", e => {
+  e.preventDefault();
+  document.getElementById("form-ok").style.display = "block";
+});
+</script>
+</body>
+</html>
